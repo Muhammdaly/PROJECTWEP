@@ -6,13 +6,20 @@ A web-based pharmacy directory and medicine availability search engine designed 
 
 ## 📸 Screenshots & Showcase
 
-| Page | Description | Preview |
-| :--- | :--- | :---: |
-| **Home Page & Search** | Clean landing page featuring an intuitive medicine search bar with location filtering. | *![Home Page](path/to/home.png)* |
-| **Search Results** | Live availability results displaying stock quantities, prices, pharmacy address, and direct call actions. | *![Search Results](path/to/search-results.png)* |
-| **Pharmacies Directory** | Responsive grid highlighting partner pharmacies with brand logos, full addresses, and contact numbers. | *![Pharmacies](path/to/pharmacies.png)* |
-| **Authentication System** | Secure login and registration interface for user/pharmacy account management. | *![Login](path/to/login.png)* |
-| **Profile & Account Settings** | Comprehensive user dashboard supporting profile picture uploads, detail editing, and account deletion. | *![Profile Edit](path/to/profile.png)* |
+<img width="1600" height="852" alt="WhatsApp Image 2026-08-20 at 9 16 48 AM (1)" src="https://github.com/user-attachments/assets/54f1dd60-1c59-4c75-8c97-6b681ef406ad" />
+<img width="1600" height="840" alt="WhatsApp Image 2026-08-20 at 9 23 08 AM" src="https://github.com/user-attachments/assets/4220dd18-ba78-4cd7-8849-94fb4832b994" />
+
+
+<img width="1600" height="867" alt="WhatsApp Image 2026-08-20 at 9 16 48 AM (2)" src="https://github.com/user-attachments/assets/476be41a-a299-4c46-9092-e848c3b53fb1" />
+
+<img width="1600" height="853" alt="WhatsApp Image 2026-08-20 at 9 16 48 AM (3)" src="https://github.com/user-attachments/assets/8c821495-7d90-4048-9054-cfde2f0d4e2f" />
+
+
+<img width="1600" height="809" alt="WhatsApp Image 2026-08-20 at 9 16 48 AM (4)" src="https://github.com/user-attachments/assets/ae03bcad-96a4-4cbc-baf2-240965d21fb2" />
+
+<img width="1600" height="852" alt="WhatsApp Image 2026-08-20 at 9 16 48 AM" src="https://github.com/user-attachments/assets/20c540d7-a82f-4d80-9733-0b814308442a" />
+
+<img width="1600" height="723" alt="WhatsApp Image 2026-08-20 at 9 20 33 AM" src="https://github.com/user-attachments/assets/69e21eca-0aca-40f3-81eb-75363cdeae1b" />
 
 ---
 
