@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("connection.php");
+mysqli_set_charset($connection,"utf8mb4");
 include("header.php");
 
 $query = "SELECT * FROM `pharmacies`";
