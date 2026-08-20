@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2026 at 03:03 PM
+-- Generation Time: Aug 20, 2026 at 08:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,22 @@ CREATE TABLE `medicines` (
   `name` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `medicines`
+--
+
+INSERT INTO `medicines` (`id`, `name`) VALUES
+(16, 'باراسيتامول'),
+(17, 'بانادول'),
+(18, 'أوجمنتين'),
+(19, 'كتافلام'),
+(20, 'فولتارين'),
+(21, 'نيوروفين'),
+(22, 'زيرتك'),
+(23, 'كونجستال'),
+(24, 'بروفين'),
+(25, 'انتينال');
+
 -- --------------------------------------------------------
 
 --
@@ -43,8 +59,20 @@ CREATE TABLE `pharmacies` (
   `name` varchar(150) NOT NULL,
   `address` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pharmacies`
+--
+
+INSERT INTO `pharmacies` (`id`, `name`, `address`, `phone`, `user_id`, `image`) VALUES
+(14, 'صيدلية العزبي - مدينة نصر', 'القاهرة، مدينة نصر، شارع عباس العقاد', '01012345001', 3, 'imags/pharmacy1.png'),
+(15, 'صيدلية سيف - المعادي', 'القاهرة، المعادي، شارع 9', '01012345002', 3, 'imags/pharmacy2.png'),
+(16, 'صيدلية 19011 - مصر الجديدة', 'القاهرة، مصر الجديدة، شارع الميرغني', '01012345003', 3, 'imags/pharmacy3.png'),
+(17, 'صيدلية رشدي - وسط البلد', 'القاهرة، وسط البلد، شارع طلعت حرب', '01012345004', 3, 'imags/pharmacy4.png'),
+(18, 'صيدلية النهضة - المهندسين', 'القاهرة، المهندسين، شارع جامعة الدول', '01012345005', 3, 'imags/pharmacy5.png');
 
 -- --------------------------------------------------------
 
@@ -60,6 +88,27 @@ CREATE TABLE `pharmacy_medicines` (
   `price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `pharmacy_medicines`
+--
+
+INSERT INTO `pharmacy_medicines` (`id`, `pharmacy_id`, `medicine_id`, `quantity`, `price`) VALUES
+(31, 14, 16, 50, 10.50),
+(32, 14, 17, 30, 15.00),
+(33, 14, 19, 20, 25.00),
+(34, 15, 16, 15, 11.00),
+(35, 15, 18, 40, 45.00),
+(36, 15, 21, 25, 20.00),
+(37, 16, 17, 60, 14.50),
+(38, 16, 20, 35, 30.00),
+(39, 16, 24, 45, 18.00),
+(40, 17, 16, 10, 12.00),
+(41, 17, 22, 20, 35.00),
+(42, 17, 25, 15, 22.00),
+(43, 18, 18, 25, 44.00),
+(44, 18, 23, 30, 16.50),
+(45, 18, 20, 10, 31.00);
+
 -- --------------------------------------------------------
 
 --
@@ -71,8 +120,18 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(30) NOT NULL DEFAULT 'user'
+  `role` varchar(30) NOT NULL DEFAULT 'user',
+  `image` varchar(255) DEFAULT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `image`, `date`) VALUES
+(3, 'm', 'n@gmail.com', '$2y$10$OhRZggAeDbwFwzAPj18kfepqz2MQmHQVBIRO3X4iSWn.w0DvN6hg2', 'user', 'upload/pharmacy1.png', '2026-08-18 15:07:32'),
+(4, 'mmm', 'mmm@gmail.com', '$2y$10$wUqw.SF3cRY05Ad9x5SZzOyILneJfgpW7/81KrFHNYiNxk1l7ExS6', 'user', NULL, '2026-08-20 02:59:02');
 
 --
 -- Indexes for dumped tables
@@ -113,25 +172,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `medicines`
 --
 ALTER TABLE `medicines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `pharmacies`
 --
 ALTER TABLE `pharmacies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `pharmacy_medicines`
 --
 ALTER TABLE `pharmacy_medicines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
