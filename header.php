@@ -1,3 +1,4 @@
+<!-- Header file for the project, which includes the HTML structure and navigation menu. It also checks if a user is logged in or not and displays appropriate links accordingly. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
