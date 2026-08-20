@@ -38,9 +38,9 @@ if($_POST){
 
 <main>
 <form class="signup-form" action="" method="post">
-    <input type="text" name="username" placeholder="username"/>
-    <input type="email" name="Email" placeholder="Email"/>
-    <input type="password" name="password" placeholder="password"/>
+    <input type="text" name="username" placeholder="username"required />
+    <input type="email" name="Email" placeholder="Email"required/>
+    <input type="password" name="password" placeholder="password"required minlength="6"/>
     <button>Sign UP</button>
 
     <?php if(isset($error)){ ?>
